@@ -1,0 +1,35 @@
+---
+title: "Preprocess_and_learn"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Preprocess_and_learn}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+```{r setup}
+library(msml)
+```
+
+This package is build to facilitate new functions that are usable for normalization and noise filtering of metabolomics data. The core-principle of msml is "convenience" and the user is not required to know of advanced R concepts to contribute to the package and/or write custom functions.
+
+So far only one loader function is written; It parses the csv file returned by xcms' featureData() into an R-list, which contains an intensity matrix and a peak matrix. The intensity matrix contains features along the columns and observations on the rows (transposed format of xcms output) and the peak matrix contains information of each peak. Row i of the peak matrix corresponds to column i of the intensity matrix.
+
+Finally, it is up to the user to load the meta data (which contains the variables of interest). Throughout this package we'ere interested in making the intensity matrix explain as much as possible about our variable of interest without looking at the variable of interest - if we did, it would mean overfitting!
+
+Let's load some data so we can see how the data structures are used:
+```{r}
+
+```
+
+
+Now we're ready to perform a few 
+
+
